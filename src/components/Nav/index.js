@@ -18,21 +18,21 @@ function Nav() {
         console.log(`${name} clicked`)
     }
     return(
-        <header>
+        <header className="flex-row px-1">
             <h2>
-                <a href="/">
-                    <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+                <a data-testid="link" href="/">
+                    <span role="img" aria-label="camera"> 📸 Oh Snap!</span> 
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
-                    <li className="mx-2">
-                        <a href="#about">
+                    <li className="mx-1">
+                        <a data-testid="about" href="#about">
                             About me
                         </a>
                     </li>
                     <li>
-                        <span>Contact</span>
+                        <span className="mx-1">Contact</span>
                     </li>
                     {categories.map((category) => (
                         <li className="mx-1" key={category.name}>
